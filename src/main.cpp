@@ -13,7 +13,7 @@
 #ifndef _WIN32
 #define _WIN32_WINNT 0x0601 //Target Windows 7 SP1
 #include <sys/time.h>
-#include "../../swell/swell.h"
+#include "../vendor/WDL/WDL/swell/swell.h"
 #endif
 
 #include "resource.h"
@@ -155,23 +155,16 @@ static HWND ccontrolCreator(HWND parent, const char *cname, int idx, const char 
 
 #include "../vendor/WDL/WDL/swell/swell-dlggen.h"
 
-// define our dialog box resource!
+// Include the resource files build by swell_resgen.php
+#include "basic_swell_template.rc_mac_dlgmake"
+#include "basic_swell_template.rc_mac_menu"
 
-SWELL_DEFINE_DIALOG_RESOURCE_BEGIN(IDD_DIALOG1,SWELL_DLG_WS_RESIZABLE|SWELL_DLG_WS_FLIPPED,"LICE Test",400,300,1.8)
-BEGIN
-CONTROL         "",IDC_RECT,"TestRenderingClass",0,7,23,384,239 // we arae creating a custom control here because it will be opaque and therefor a LOT faster drawing
-COMBOBOX        IDC_COMBO1,7,7,181,170,CBS_DROPDOWNLIST | WS_VSCROLL | 
-WS_TABSTOP
-
-END
-SWELL_DEFINE_DIALOG_RESOURCE_END(IDD_DIALOG1)
-
-#if !defined(__APPLE__)
+#if !defined(__APPLE__) // This is for Linux only.
 int main(int argc, char **argv)
 {
   SWELL_initargs(&argc,&argv);
   SWELL_Internal_PostMessage_Init();
-  SWELL_ExtendedAPI("APPNAME",(void*)"LICE test");
+  SWELL_ExtendedAPI("APPNAME",(void*)"basic_swell_template");
   SWELL_RegisterCustomControlCreator(ccontrolCreator);
   //SWELL_ExtendedAPI("INIFILE",(void*)"path/to/ini/file.ini");
   //SWELL_ExtendedAPI("FONTPANGRAM",(void*)"LICE test thingy lbah akbzfshauoh01384u1023");
