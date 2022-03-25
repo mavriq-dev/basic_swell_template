@@ -3,7 +3,6 @@
 // Used by basic_swell_template.rc
 //
 #define IDD_DIALOG1                     101
-#define IDC_PNG1                        102
 #define IDI_MAIN                        103
 #define IDC_RECT                        1001
 

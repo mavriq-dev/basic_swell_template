@@ -19,10 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="image.png" />
-    <Image Include="main.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include=".\main.cpp" />
   </ItemGroup>
   <ItemGroup>
