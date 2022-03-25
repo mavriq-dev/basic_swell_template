@@ -34,32 +34,10 @@ static void DoPaint(HWND hwndDlg, HDC dc)
   
 }
 
-
 // this is only used on OS X since it's way faster there
 LRESULT WINAPI testRenderDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-  /*if (uMsg==WM_PAINT)
-  {
-    PAINTSTRUCT ps;
-    
-    HDC dc = BeginPaint(hwndDlg, &ps);
-    DoPaint(hwndDlg,dc);
-    EndPaint(hwndDlg, &ps);
-    return 0;
-  }
-  if (uMsg == WM_LBUTTONDOWN)
-  {
-    m_cap=true;
-    SetCapture(hwndDlg);
-    ShowCursor(FALSE);
-  }
-  else if (uMsg == WM_LBUTTONUP||uMsg==WM_CAPTURECHANGED)
-  {
-    m_cap=false;
-    ShowCursor(TRUE);
-    if (uMsg==WM_LBUTTONUP)ReleaseCapture();
-  }
-    */
+
    return DefWindowProc(hwndDlg,uMsg,wParam,lParam);
 }
 

@@ -41,6 +41,7 @@
 		EADC15C427ED109500962A5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EADC15F427ED1B2D00962A5B /* basic_swell_template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basic_swell_template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADC15F627ED4A3300962A5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EADC15F827ED6CAA00962A5B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		29B97314FDCFA39411CA2CEA /* test */ = {
 			isa = PBXGroup;
 			children = (
+				EADC15F827ED6CAA00962A5B /* main.cpp */,
 				EADC15F527ED4A3300962A5B /* MainMenu.xib */,
 				EADC15C327ED0CD800962A5B /* basic_swell_template.entitlements */,
 				33E075630CE4DDD3005DDE14 /* Controller.h */,
