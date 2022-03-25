@@ -11,9 +11,9 @@
 #include <stdio.h>
 
 #ifndef _WIN32
-#define _WIN32_WINNT 0x0601 //Target Windows 7 SP1
-#include <sys/time.h>
 #include "../vendor/WDL/WDL/swell/swell.h"
+#else
+#define _WIN32_WINNT 0x0601 //Target Windows 7 SP1
 #endif
 
 #include "resource.h"
@@ -156,7 +156,7 @@ static HWND ccontrolCreator(HWND parent, const char *cname, int idx, const char 
 #include "../vendor/WDL/WDL/swell/swell-dlggen.h"
 
 // Include the resource files build by swell_resgen.php
-#include "basic_swell_template.rc_mac_dlgmake"
+#include "basic_swell_template.rc_mac_dlg"
 #include "basic_swell_template.rc_mac_menu"
 
 #if !defined(__APPLE__) // This is for Linux only.
