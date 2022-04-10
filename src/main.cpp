@@ -7,8 +7,8 @@
 #define WDL_NO_DEFINE_MINMAX
 #endif
 #include "../vendor/WDL/WDL/wdltypes.h"
-#include <math.h>
-#include <stdio.h>
+//#include <math.h>
+//#include <stdio.h>
 
 #ifndef _WIN32
 #include "../vendor/WDL/WDL/swell/swell.h"
@@ -35,11 +35,11 @@ static void DoPaint(HWND hwndDlg, HDC dc)
 }
 
 // this is only used on OS X since it's way faster there
-LRESULT WINAPI testRenderDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
+/*LRESULT WINAPI testRenderDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 
    return DefWindowProc(hwndDlg,uMsg,wParam,lParam);
-}
+}*/
 
 WDL_DLGRET WINAPI dlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -118,7 +118,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 }
 #else
 
-static HWND ccontrolCreator(HWND parent, const char *cname, int idx, const char *classname, int style, int x, int y, int w, int h)
+/*static HWND ccontrolCreator(HWND parent, const char *cname, int idx, const char *classname, int style, int x, int y, int w, int h)
 {
   if (!stricmp(classname,"TestRenderingClass"))
   {
@@ -129,7 +129,7 @@ static HWND ccontrolCreator(HWND parent, const char *cname, int idx, const char 
     return hw;
   }
   return 0;
-}
+}*/
 
 #include "../vendor/WDL/WDL/swell/swell-dlggen.h"
 
@@ -143,7 +143,7 @@ int main(int argc, char **argv)
   SWELL_initargs(&argc,&argv);
   SWELL_Internal_PostMessage_Init();
   SWELL_ExtendedAPI("APPNAME",(void*)"basic_swell_template");
-  SWELL_RegisterCustomControlCreator(ccontrolCreator);
+  //SWELL_RegisterCustomControlCreator(ccontrolCreator);
   //SWELL_ExtendedAPI("INIFILE",(void*)"path/to/ini/file.ini");
   //SWELL_ExtendedAPI("FONTPANGRAM",(void*)"LICE test thingy lbah akbzfshauoh01384u1023");
   DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG1), NULL, dlgProc);

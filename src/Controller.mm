@@ -6,7 +6,6 @@
 @implementation Controller
 -(void)awakeFromNib
 {
-  SWELL_RegisterCustomControlCreator(ccontrolCreator);
   HWND h=CreateDialog(NULL,MAKEINTRESOURCE(IDD_DIALOG1),NULL,dlgProc);
   ShowWindow(h,SW_SHOW);
 }

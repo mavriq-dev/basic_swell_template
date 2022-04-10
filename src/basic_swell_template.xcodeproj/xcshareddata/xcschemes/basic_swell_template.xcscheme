@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EADC15DF27ED1B2D00962A5B"
-               BuildableName = "basic_swell_teplate copy.app"
+               BuildableName = "basic_swell_template.app"
                BlueprintName = "basic_swell_template"
                ReferencedContainer = "container:basic_swell_template.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EADC15DF27ED1B2D00962A5B"
-            BuildableName = "basic_swell_teplate copy.app"
+            BuildableName = "basic_swell_template.app"
             BlueprintName = "basic_swell_template"
             ReferencedContainer = "container:basic_swell_template.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EADC15DF27ED1B2D00962A5B"
-            BuildableName = "basic_swell_teplate copy.app"
+            BuildableName = "basic_swell_template.app"
             BlueprintName = "basic_swell_template"
             ReferencedContainer = "container:basic_swell_template.xcodeproj">
          </BuildableReference>
